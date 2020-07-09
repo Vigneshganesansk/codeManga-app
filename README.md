@@ -14,8 +14,7 @@ index.html{
             content.component : { // is the area, where the questions and solutions will be present(array of content-card.component).
                 content-card.component:{},// individual questions displayed as list cards.
             },
-            editor-view.component:{} // appears after selecting content-card. Displays question,
-                                      //  solution, test-cases. (Doubtful about its positioning) 
+            editor-view.component:{} // appears after selecting content-card. Doubt
            
         },
         user.module:{
