@@ -1,6 +1,7 @@
 # programmer-app hierarchy
+```sh
 index.html{
-    app.module:{
+     app.module:{
         toolbar.component : {},// lists all the sections, and sidebar as a responsive content.
         home.module: {
             features-card.component : {}, //what all the does and could do.
@@ -24,3 +25,4 @@ index.html{
         footer.component: {} // :)
     }
 }
+```
