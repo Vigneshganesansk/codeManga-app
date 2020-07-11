@@ -15,7 +15,7 @@ export class AppErrorHandler extends ErrorHandler {
   }
 
   handleError(error: Error | HttpErrorResponse) {
-    this.notificationsService.error(error.message);
+    this.notificationsService.success(error.message);
     super.handleError(error);
   }
 }
