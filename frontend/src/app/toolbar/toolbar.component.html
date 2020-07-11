@@ -6,7 +6,7 @@
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async)!.matches">
     <mat-toolbar color="primary">Menu</mat-toolbar>
-    <mat-nav-list>
+    <mat-nav-list fxLayout="column" fxLayoutAlign="space-between">
       <a mat-list-item>Link 1</a>
       <a mat-list-item>Link 2</a>
       <a mat-list-item>Link 3</a>
@@ -15,7 +15,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar color="primary"  fxLayout="row" fxLayoutAlign="space-between center">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -24,14 +24,17 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Programmer-App</span>
-      <div class = "toolbarList" *ngIf="(isHandset$ | async) === false">
-        <a mat-list-item>Link 1</a>
-        <a mat-list-item>Link 2</a>
-        <a mat-list-item>Link 3</a>
-        <a mat-list-item>Link 4</a>
-        <a mat-list-item>Link 5</a>
-      </div>
+      <span class="title"><h1>Programmer-App</h1></span>
+      
+        <a mat-list-item *ngIf="(isHandset$ | async) === false">Link 1</a>
+        <a mat-list-item *ngIf="(isHandset$ | async) === false">Link 2</a>
+        <a mat-list-item *ngIf="(isHandset$ | async) === false">Link 3</a>
+        <a mat-list-item *ngIf="(isHandset$ | async) === false">Link 4</a>
+        <a mat-list-item *ngIf="(isHandset$ | async) === false">Link 5</a>
+      
+      <button mat-icon-button>
+        <mat-icon aria-label="Login">login</mat-icon>
+      </button>
     </mat-toolbar>
     <ng-content></ng-content>
   </mat-sidenav-content>

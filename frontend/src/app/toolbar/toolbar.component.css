@@ -5,6 +5,10 @@
 .sidenav {
   width: 200px;
 }
+.mat-toolbar{
+  display: flex;
+  flex-direction: row;
+}
 
 .mat-toolbar.mat-primary {
   position: sticky;
@@ -13,9 +17,6 @@
 }
 .hidden{
   display: none;
-}
-.spacer{
-  flex: 1 1 auto;
 }
 mat-toolbar a {
   display: inline-block;
@@ -28,8 +29,8 @@ mat-list-item{
 }
 @media (max-width: 960px)
 {
-  .toolbarList{
-    display: none;
+  .title{
+    margin: 0 auto;
   }
 }
 @media (min-width: 960px)
@@ -37,4 +38,7 @@ mat-list-item{
   .sidenav{
     display: none;
   }
+}
+.filler {
+  flex: 1 1 auto;
 }
