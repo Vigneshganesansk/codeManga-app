@@ -7,11 +7,11 @@
       [opened]="(isHandset$ | async)!.matches">
     <mat-toolbar color="primary">Menu</mat-toolbar>
     <mat-nav-list>
-      <button mat-list-item routerLinkActive="mat-accent">Link 1</button>
-      <a mat-list-item routerLinkActive="mat-accent">Link 2</a>
-      <a mat-list-item routerLinkActive="mat-accent">Link 3</a>
-      <a mat-list-item routerLinkActive="mat-accent">Link 4</a>
-      <a mat-list-item routerLinkActive="mat-accent">Link 5</a>
+      <a mat-list-item>Link 1</a>
+      <a mat-list-item>Link 2</a>
+      <a mat-list-item>Link 3</a>
+      <a mat-list-item>Link 4</a>
+      <a mat-list-item>Link 5</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -24,14 +24,13 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span class="banner">Programmer-App</span>
-      <!-- <span class="spacer"></span> -->
+      <span>Programmer-App</span>
       <div *ngIf="(isHandset$ | async) === false">
-        <a mat-list-item routerLinkActive="mat-accent">Link 1</a>
-        <a mat-list-item routerLinkActive="mat-accent">Link 2</a>
-        <a mat-list-item routerLinkActive="mat-accent">Link 3</a>
-        <a mat-list-item routerLinkActive="mat-accent">Link 4</a>
-        <a mat-list-item routerLinkActive="mat-accent">Link 5</a>
+        <a mat-list-item>Link 1</a>
+        <a mat-list-item>Link 2</a>
+        <a mat-list-item>Link 3</a>
+        <a mat-list-item>Link 4</a>
+        <a mat-list-item>Link 5</a>
       </div>
     </mat-toolbar>
     <ng-content></ng-content>
