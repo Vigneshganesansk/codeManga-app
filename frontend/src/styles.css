@@ -5,3 +5,25 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     background: #000000;
     color: #fff;
   }
+      
+
+
+  .error-notification-overlay {
+    color: black;
+    background-color: red;
+  }
+
+  .info-notification-overlay {
+    color: black;
+    background-color: white;
+  }
+
+  .success-notification-overlay {
+    color: black;
+    background-color: green;
+  }
+
+  .warning-notification-overlay {
+    color: black;
+    background-color: yellow;
+  }
