@@ -26,3 +26,10 @@ mat-toolbar a {
 mat-list-item{
   margin: inherit;
 }
+@media (min-width: 960px)
+{
+  .banner{
+    display: flex;
+    align-items: center;
+  }
+}
