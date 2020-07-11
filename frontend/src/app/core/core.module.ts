@@ -1,5 +1,7 @@
-import { NgModule, Optional, SkipSelf } from '@angular/core';
+import { NgModule, Optional, SkipSelf, ErrorHandler } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { httpInterceptorProviders } from './http-interceptors';
+import { AppErrorHandler } from './error-handler/app-error-handler.service';
 
 
 
@@ -7,7 +9,11 @@ import { CommonModule } from '@angular/common';
   declarations: [],
   imports: [
     CommonModule
-  ]
+  ],
+  providers: [
+    httpInterceptorProviders,
+    { provide: ErrorHandler, useClass: AppErrorHandler },
+  ],
 })
 export class CoreModule { 
   constructor(
