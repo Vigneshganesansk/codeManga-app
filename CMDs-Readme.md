@@ -1,0 +1,3 @@
+- npm run start
+- ng serve --live-reload=false
+- ng g module <name> --routing=true
