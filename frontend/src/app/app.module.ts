@@ -9,12 +9,15 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import { HomeModule } from './home/home.module';
+import { ScrollSpyDirective } from './core/directives/scroll-spy.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
+    ScrollSpyDirective,
   ],
   imports: [
     // angular
@@ -26,9 +29,13 @@ import { SharedModule } from './shared/shared.module';
     CoreModule,
     SharedModule,
 
+    // features
+    HomeModule,
+
     // app
     AppRoutingModule,
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
