@@ -1,4 +1,5 @@
-    <div id="link0" class="jumbotron text-center pimg1" fxLayout="column" fxLayoutAlign="center center" #link0>
+<div id="parentDiv" scrollSpy [spiedTags]="['DIV']" (sectionChange)="onSectionChange($event)" style="height:100vh;overflow-y: scroll;">
+    <div id="link0" class="jumbotron text-center pimg1" fxLayout="column" fxLayoutAlign="center center">
         <h1 class="mat-display-2">Company</h1> 
         <h1>The world's first inclusive free stock coding & question library</h1>
     </div>
@@ -15,7 +16,7 @@
             </div>
         </div>
     </div>
-    <div id="link2" class="container-fluid bg-grey"  #link2>
+    <div id="link2" class="container-fluid bg-grey">
         <div class="row center">
         <h2> What is Company? </h2>
         </div>
@@ -23,3 +24,7 @@
             <app-features-card *ngFor="let i of [1,2,3,4,5,6,7,8]"></app-features-card>
         </div>
     </div>
+    <div id="link3" class="container-fluid bg-grey">
+        <app-category></app-category>
+    </div>
+</div>

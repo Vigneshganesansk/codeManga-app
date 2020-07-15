@@ -15,22 +15,22 @@ import { ToolbarService } from '../core/services/toolbar/toolbar.service';
 export class ToolbarComponent implements OnInit {
 
 
-scroll:boolean=false;
-currentActive: Number;
-constructor(private breakpointObserver: BreakpointObserver, private toolbarService: ToolbarService) {
+scroll: boolean = false;
+scrollValue:Number;
+currentActive: String;
+constructor(private breakpointObserver: BreakpointObserver, private toolbarService: ToolbarService, private el: ElementRef) {
   this.toolbarService.currrentActiveTabObserver.subscribe((response)=>{
       this.currentActive = response;
     }) 
   }
 
   ngOnInit() {
-      window.addEventListener('scroll', this.scrolling, true);
+    this.toolbarService.isScrollingObserver.subscribe((response)=>{
+      this.scroll = response;
+    })
   }
-  scrolling=(s)=>{
-    let sc = s.target.scrollingElement.scrollTop;
-    if(sc >=100){this.scroll=true}
-    else{this.scroll=false}
-  }
+
+
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
   .pipe(
     map(result => result.matches),

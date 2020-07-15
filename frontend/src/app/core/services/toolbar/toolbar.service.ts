@@ -7,17 +7,23 @@ import { BehaviorSubject, Subject } from 'rxjs';
 export class ToolbarService {
 
   constructor() { }
-  private currentActiveTab = new BehaviorSubject<Number>(0); 
+  private currentActiveTab = new BehaviorSubject<String>('link0'); 
   private selectedTab = new Subject<String>();
   currrentActiveTabObserver = this.currentActiveTab.asObservable();
-  setSelectedTab(number: Number)
+  setSelectedTab(link: String)
   {
-      this.currentActiveTab.next(number);
+      this.currentActiveTab.next(link);
   }
   scrollToSelectedTab = this.selectedTab.asObservable();
   setClickedTab(el: String)
   {
     this.selectedTab.next(el);
+  }
+  private isScrolling = new BehaviorSubject<boolean>(false);
+  isScrollingObserver = this.isScrolling.asObservable();
+  setIsScrollingNext(scroll: boolean)
+  {
+    this.isScrolling.next(scroll);
   }
 
 }

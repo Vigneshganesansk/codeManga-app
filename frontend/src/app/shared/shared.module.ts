@@ -58,7 +58,7 @@ import { ScrollSpyDirective } from '../core/directives/scroll-spy.directive';
     FlexLayoutModule,
     NgbModule,
   ],
-  declarations: [],
+  declarations: [ScrollSpyDirective],
   exports: [
     CommonModule,
     FormsModule,
@@ -87,6 +87,7 @@ import { ScrollSpyDirective } from '../core/directives/scroll-spy.directive';
 
     FlexLayoutModule,
     NgbModule,
+    ScrollSpyDirective,
   ]
 })
 export class SharedModule {}
