@@ -1,0 +1,30 @@
+<div id="parentDiv" scrollSpy [spiedTags]="['DIV']" (sectionChange)="onSectionChange($event)" style="height:100vh;overflow-y: scroll;">
+    <div id="link0" class="jumbotron text-center pimg1" fxLayout="column" fxLayoutAlign="center center">
+        <h1 class="mat-display-2">Company</h1> 
+        <h1>The world's first inclusive free stock coding & question library</h1>
+    </div>
+
+    <div id="link1" class="container-fluid" #link1>
+        <div class="row">
+            <div class="col-sm-8">
+                <h2>About Company Page</h2><br>
+                <h4>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis aliquam repudiandae consequuntur minima accusamus rerum dolor id velit magni, illum iusto eveniet consequatur, ad quae necessitatibus fugiat commodi quos molestiae. Beatae libero perferendis pariatur, iusto at veritatis. Fugiat et iure ipsum laboriosam eos rerum, voluptatem cupiditate repellendus amet similique officia adipisci? Optio possimus inventore neque tempora eos accusamus qui sint, facilis esse illo ut omnis distinctio, recusandae, molestiae cumque odit magnam. Vero ab distinctio, numquam voluptatum amet, quos odit fugit impedit totam fuga, quis assumenda temporibus. Blanditiis, saepe est similique neque, illum veritatis consequatur perferendis libero, fuga minus modi tempora?
+                </h4>
+            </div>
+            <div class="col-sm-4">
+            </div>
+        </div>
+    </div>
+    <div id="link2" class="container-fluid bg-grey">
+        <div class="row center">
+        <h2> What is Company? </h2>
+        </div>
+        <div class="row" fxLayout="row wrap" fxLayoutAlign="space-around center" fxLayoutGap="10px">
+            <app-features-card *ngFor="let i of [1,2,3,4,5,6,7,8]"></app-features-card>
+        </div>
+    </div>
+    <div id="link3" class="container-fluid bg-grey">
+        <app-category></app-category>
+    </div>
+</div>
