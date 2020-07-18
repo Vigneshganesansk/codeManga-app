@@ -1,0 +1,57 @@
+.bg-light{
+    background-color: black;
+    // color: black;
+}
+.sidenav-container {
+    height: 100%;
+  }
+  
+  .sidenav {
+    width: 200px;
+  }
+  .mat-toolbar{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  .hidden{
+    display: none;
+  }
+  mat-toolbar a {
+    display: inline-block;
+    margin: 0 30px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  mat-list-item{
+    margin: inherit;
+  }
+  @media (max-width: 960px)
+  {
+    .title{
+      margin: 0 auto;
+    }
+  }
+  @media (min-width: 960px)
+  {
+    .sidenav{
+      display: none;
+    }
+  }
+  .filler {
+    flex: 1 1 auto;
+  }
+
+  .active {
+    font-weight: bold !important;
+    color: black !important;
+    font-size: 1.2rem !important;
+    border: 20px solid white;
+    background-color: white;
+}

@@ -1,0 +1,10 @@
+.pimg1{
+    background-image: url('../assets/img/pimg1.jpg');
+    height: 100vh;
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

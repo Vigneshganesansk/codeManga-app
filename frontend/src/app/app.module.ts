@@ -9,6 +9,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import { HomeModule } from './home/home.module';
 
 
 @NgModule({
@@ -26,9 +27,13 @@ import { SharedModule } from './shared/shared.module';
     CoreModule,
     SharedModule,
 
+    // features
+    HomeModule,
+
     // app
     AppRoutingModule,
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
