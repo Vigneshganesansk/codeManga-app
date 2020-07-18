@@ -23,14 +23,14 @@ export class HomeComponent implements OnInit  {
   }
 
   ngOnInit(): void {
-    this._route.params.subscribe(params => {
-      this.currentSection = params['sectionId'];
-      this.scrollTo(this.currentSection);
-    });
+    // this._route.params.subscribe(params => {
+    //   this.currentSection = params['sectionId'];
+    //   this.scrollTo(this.currentSection);
+    // });
   }
 
   onSectionChange(sectionId: string) {
-    this._location.go(sectionId);
+    // this._location.go(sectionId);
     this.currentSection = sectionId;
     this.toolbarService.setSelectedTab(this.currentSection);
 }

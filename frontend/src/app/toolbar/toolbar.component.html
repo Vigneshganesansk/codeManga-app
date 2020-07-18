@@ -32,7 +32,7 @@
         <a mat-list-item (click)="scrollToElement('link1')" *ngIf="(isHandset$ | async) === false" [ngClass]="{'active': currentActive === 'link1'}">Link 1</a>
         <a mat-list-item (click)="scrollToElement('link2')" *ngIf="(isHandset$ | async) === false" [ngClass]="{'active': currentActive === 'link2'}">Link 2</a>
         <a mat-list-item (click)="scrollToElement('link3')" *ngIf="(isHandset$ | async) === false" [ngClass]="{'active': currentActive === 'link3'}">Link 3</a>
-        <a mat-list-item (click)="scrollToElement('link4')" *ngIf="(isHandset$ | async) === false" [ngClass]="{'active': currentActive === 'link4'}">Link 4</a>
+        <a mat-list-item routerLink="/content" *ngIf="(isHandset$ | async) === false" [ngClass]="{'active': currentActive === 'link4'}">Link 4</a>
         <a mat-list-item (click)="scrollToElement('link5')" *ngIf="(isHandset$ | async) === false" [ngClass]="{'active': currentActive === 'link5'}">Link 5</a>
       
       <button mat-icon-button>
