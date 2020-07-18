@@ -31,13 +31,13 @@
 }
 .pimg1{
     background-image: url('../../../assets/img/pimg1.jpg');
-    height: 75vh;
+    height: 100vh;
 }
-.pimg2{
-    background-image: url('../../../assets/img/pimg2.jpg');
-    height: 50vh;
-}
-.pimg1,.pimg2{
+// .pimg2{
+//     background-image: url('../../../assets/img/pimg2.jpg');
+//     height: 50vh;
+// }
+.pimg1{
     position: relative;
     opacity: 1;
     background-position: center;

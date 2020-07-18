@@ -5,7 +5,7 @@ import { SharedModule } from '../shared/shared.module';
 import { FeaturesCardComponent } from './features-card/features-card.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { CategoryComponent } from './category/category.component';
-import { CategoryCardComponent } from './category-card/category-card.component';
+import { CategoryCardComponent } from './category/category-card/category-card.component';
 
 
 
