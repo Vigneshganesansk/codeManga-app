@@ -1,0 +1,12 @@
+.container-fluid {
+    width: 75% !important;
+}
+
+.card-header {
+    margin: 0px !important;
+    border-bottom: 0px !important;
+}
+
+.btn {
+    padding: 0px 5px !important;
+}

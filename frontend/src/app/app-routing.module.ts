@@ -13,6 +13,10 @@ const routes: Routes = [
     path: '',
     loadChildren: 'app/home/home.module#HomeModule'
   },
+  {
+    path: 'content',
+    loadChildren: 'app/content/content.module#ContentModule'
+  },
 ];
 
 @NgModule({

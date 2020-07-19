@@ -1,0 +1,62 @@
+<div style="margin-top: 100px;" class="container-fluid">
+    <div class="mb-1">
+        <button class="btn btn-success">back</button>
+        <button class="btn btn-success float-right">next</button>
+    </div>
+    <div class="mb-2">
+        <div class="card">
+            <h5 class="card-header">Question
+                <button class="btn btn-success float-right" *ngIf="showQuestion" (click)="showQuestion = !showQuestion">close</button>
+                <button class="btn btn-danger float-right" *ngIf="!showQuestion" (click)="showQuestion = !showQuestion">open</button>
+            </h5>
+            <div class="card-body" *ngIf="showQuestion">
+                <p class="card-text">{{ selectedQuestion.question }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="mb-2">
+        <div class="card">
+            <h5 class="card-header">Explanation
+                <button class="btn btn-success float-right" *ngIf="showExplanation" (click)="showExplanation = !showExplanation">close</button>
+                <button class="btn btn-danger float-right" *ngIf="!showExplanation" (click)="showExplanation = !showExplanation">open</button>
+            </h5>
+            <div class="card-body" *ngIf="showExplanation">
+                <p class="card-text">{{ selectedQuestion.explanation }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="mb-2">
+        <div class="card">
+            <h5 class="card-header">Examples
+                <button class="btn btn-success float-right" *ngIf="showExamples" (click)="showExamples = !showExamples">close</button>
+                <button class="btn btn-danger float-right" *ngIf="!showExamples" (click)="showExamples = !showExamples">open</button>
+            </h5>
+            <div class="card-body" *ngIf="showExamples">
+                <p class="card-text">{{ selectedQuestion.example }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="mb-2">
+        <div class="card">
+            <div class="card-header">
+                <div *ngIf="selectedQuestion.solution.length > 0">
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item" (click)="setLangCode(sol)" *ngFor="let sol of selectedQuestion.solution">
+                            <a class="nav-link" [ngClass]="{ 'active': lang === sol.lang }">{{ sol.lang }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-body">
+                <!-- <p class="card-text">{{ selectedQuestion.errorText }}</p> -->
+                <ace style="height:200px"
+                    [disabled]="false" 
+                    [mode]="'java'"
+                    [theme]="'monokai'"
+                    [config]="{}"
+                    [(value)]="content">
+                </ace>
+            </div>
+        </div>
+    </div>
+</div>

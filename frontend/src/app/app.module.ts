@@ -10,6 +10,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
+import { ContentModule } from './content/content.module';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { HomeModule } from './home/home.module';
 
     // features
     HomeModule,
+    ContentModule,
 
     // app
     AppRoutingModule,

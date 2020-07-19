@@ -1,0 +1,22 @@
+[
+    {
+        "id": "1",
+        "question": "How to remove duplicate elements from the array in Java?",
+        "example": "<p>[...new Set([1, 2, 3, 4])]</p>",
+        "explanation": "<p>you can convert a list/array into set. This example is a trash. you can convert a list/array into set. This example is a trash.</p>",
+        "solution": [
+            {
+                "lang": "C++",
+                "code": "while (true) { console.writeline(true); }"
+            },
+            {
+                "lang": "Java",
+                "code": "while (true) { System.out.print(true); }"
+            },
+            {
+                "lang": "Python",
+                "code": "while (true) { print(true); }"
+            }
+        ]
+    }
+]

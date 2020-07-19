@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ContentRoutingModule } from './content-routing.module';
+import { ContentComponent } from './content/content.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [ContentComponent],
   imports: [
     CommonModule,
     ContentRoutingModule

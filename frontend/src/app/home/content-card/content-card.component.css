@@ -1,0 +1,21 @@
+.border-round {
+    border-radius: 10px !important;
+}
+
+.border-round-inner {
+    border-radius: 8px !important;
+}
+
+.custom-padding-card {
+    padding-left: 9px !important;
+    padding-right: 9px !important;
+}
+
+.card-body {
+    padding: 5px !important;
+}
+
+.card {
+    border: 0px !important;
+}
+

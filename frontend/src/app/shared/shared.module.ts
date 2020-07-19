@@ -27,15 +27,10 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ScrollSpyDirective } from '../core/directives/scroll-spy.directive';
 
-
-
-
-
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-
 
     MatButtonModule,
     MatToolbarModule,
@@ -56,7 +51,7 @@ import { ScrollSpyDirective } from '../core/directives/scroll-spy.directive';
     MatDividerModule,
 
     FlexLayoutModule,
-    NgbModule,
+    NgbModule
   ],
   declarations: [ScrollSpyDirective],
   exports: [
