@@ -1,10 +1,10 @@
-<div id="parentDiv" style="height:100vh;overflow-y: scroll;">
-
-    <div class="jumbotron text-center pimg1" fxLayout="column" fxLayoutAlign="center center">
-        <h1 class="mat-display-2">Company</h1> 
-        <h1>This is content page</h1>
+<!-- <div id="parentDiv" style="height:100vh;overflow-y: scroll;"> -->
+    <div class="container-fluid">
+        <div *ngFor="let i of [1,2,3,4,5,6,7,8]" class="col-sm-6 col-md-4 col-lg-3">
+            <a routerLink="contentview"><app-content-card></app-content-card></a>
+        </div>
     </div>
-</div>
+<!-- </div> -->
 
 <!-- <div class="container-fluid">
     <div class="row">
