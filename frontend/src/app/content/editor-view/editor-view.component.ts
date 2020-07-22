@@ -6,33 +6,97 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./editor-view.component.css']
 })
 export class EditorViewComponent implements OnInit {
-  showQuestion: boolean = true;
-  showExplanation: boolean = true;
-  showExamples: boolean = true;
-  lang: string = 'C++';
-  selectedQuestion: Question;
   questions: any;
-  content: string;
 
   constructor() {
     this.questions = [
       {
-        "id": "1",
-        "question": "How to remove duplicate elements from the array in Java?",
-        "example": "<p>[...new Set([1, 2, 3, 4])]</p>",
-        "explanation": "<p>you can convert a list/array into set. This example is a trash. you can convert a list/array into set. This example is a trash.</p>",
-        "solution": [
+        "id": 1,
+        "url": "write-a-program-to-reverse-an-array",
+        "company": ["Google", "Facebook", "Amazon", "DBS"],
+        "topic": ["Arrays", "loops"],
+        "type": "full-length",
+        "difficulty": "easy",
+        "data": [
           {
-            "lang": "C++",
-            "code": "while (true) { console.writeline(true); }"
+            "type": "question",
+            "heading": "Reverse an array",
+            "value": "Write a program to reverse an array or string",
+            "isString": true,
+            "isInnerHTML": false,
+            "isEditor": false
           },
           {
-            "lang": "Java",
-            "code": "while (true) { System.out.print(true); }"
+            "type": "example",
+            "heading": "Examples",
+            "value": "<div style=\"background: lightgray;\"><pre style=\"margin-botton: 5px 10px;\">Input  : arr[] = {1, 2, 3} </br>Output : arr[] = {3, 2, 1}  </br>Input :  arr[] = {4, 5, 1, 2} </br>Output : arr[] = {2, 1, 5, 4} </pre></div>",
+            "isString": false,
+            "isInnerHTML": true,
+            "isEditor": false
           },
           {
-            "lang": "Python",
-            "code": "while (true) { print(true); }"
+            "type": "explanation",
+            "heading": "Explanation",
+            "value": "<p>Input  : arr[] = {1, 2, 3} Output : arr[] = {3, 2, 1} Input :  arr[] = {4, 5, 1, 2} Output : arr[] = {2, 1, 5, 4} </p>",
+            "isString": false,
+            "isInnerHTML": true,
+            "isEditor": false
+          },
+          {
+            "type": "code",
+            "heading": "Optimal Code",
+            "value": [
+              {
+                "lang": "C++",
+                "value": "c_cpp",
+                "code": "while (true) {\n\tconsole.writeline(true);\n}"
+              },
+              {
+                "lang": "Java",
+                "value": "java",
+                "code": "while (true) {\n\tSystem.out.print(true);\n}"
+              },
+              {
+                "lang": "Python",
+                "value": "python",
+                "code": "while (true)\n\tprint(true)"
+              }
+            ],
+            "isString": false,
+            "isInnerHTML": false,
+            "isEditor": true
+          },
+          {
+            "type": "explanation",
+            "heading": "Explanation",
+            "value": "<p>Input  : arr[] = {1, 2, 3} Output : arr[] = {3, 2, 1} Input :  arr[] = {4, 5, 1, 2} Output : arr[] = {2, 1, 5, 4} </p>",
+            "isString": false,
+            "isInnerHTML": true,
+            "isEditor": false
+          },
+          {
+            "type": "code",
+            "heading": "Optimal Code",
+            "value": [
+              {
+                "lang": "C++",
+                "value": "c_cpp",
+                "code": "while (true) {\n\tconsole.writeline(true);\n}"
+              },
+              {
+                "lang": "Java",
+                "value": "java",
+                "code": "while (true) {\n\tSystem.out.print(true);\n}"
+              },
+              {
+                "lang": "Python",
+                "value": "python",
+                "code": "while (true)\n\tprint(true)"
+              }
+            ],
+            "isString": false,
+            "isInnerHTML": false,
+            "isEditor": true
           }
         ]
       }
@@ -40,37 +104,6 @@ export class EditorViewComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.selectedQuestion = new Question(this.questions[0]);
-    this.content = this.selectedQuestion.solution[1].code;
   }
 
-  setLangCode(sol: SolutionObject) {
-    this.lang = sol.lang;
-    this.content = sol.code;
-
-  }
-
-}
-
-export class Question {
-  constructor(result: any) {
-      this.id = result.id;
-      this.question = result.question;
-      this.explanation = result.explanation;
-      this.example = result.example;
-      this.solution = result.solution;
-      this.errorText = 'No Solutions available...';
-  }
-
-  id: number;
-  question: string;
-  explanation: string;
-  example: string;
-  solution: SolutionObject[];
-  errorText: string;
-}
-
-export class SolutionObject {
-  lang: string;
-  code: string;
 }

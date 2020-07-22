@@ -10,6 +10,7 @@ import 'brace';
 import 'brace/mode/text';
 import 'brace/mode/html';
 import 'brace/mode/java';
+import 'brace/mode/c_cpp';
 import 'brace/mode/python';
 import 'brace/mode/javascript';
 import 'brace/mode/css';
@@ -17,6 +18,7 @@ import 'brace/theme/github';
 import 'brace/theme/clouds';
 import 'brace/theme/monokai';
 import { AceModule } from 'ngx-ace-wrapper';
+import { EditorCardComponent } from './editor-card/editor-card.component';
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import { AceModule } from 'ngx-ace-wrapper';
     ContentComponent, 
     ContentCardComponent, 
     FilterSectionComponent, 
-    EditorViewComponent
+    EditorViewComponent,
+    EditorCardComponent
   ],
   imports: [
     CommonModule,
