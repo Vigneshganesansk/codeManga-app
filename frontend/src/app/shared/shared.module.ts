@@ -36,7 +36,6 @@ import { ScrollSpyDirective } from '../core/directives/scroll-spy.directive';
     CommonModule,
     FormsModule,
 
-
     MatButtonModule,
     MatToolbarModule,
     MatSelectModule,
@@ -56,7 +55,7 @@ import { ScrollSpyDirective } from '../core/directives/scroll-spy.directive';
     MatDividerModule,
 
     FlexLayoutModule,
-    NgbModule,
+    NgbModule
   ],
   declarations: [ScrollSpyDirective],
   exports: [

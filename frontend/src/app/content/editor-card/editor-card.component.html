@@ -1,0 +1,52 @@
+<div class="mb-2" *ngIf="question.isString || question.isInnerHTML" style="overflow: hidden;">
+    <div class="card">
+        <h5 class="card-header" (click)="showBody = !showBody"><strong>{{ question.heading }}</strong>
+            <i class="fa fa-caret-up float-right" *ngIf="showBody"></i>
+            <i class="fa fa-caret-down float-right" *ngIf="!showBody"></i>
+        </h5>
+        <div class="card-body" *ngIf="showBody">
+            <p class="card-text" *ngIf="question.isString">{{ question.value }}</p>
+            <div  *ngIf="question.isInnerHTML" [innerHtml]="question.value"></div>
+            <div *ngIf="question.type === 'question' && company.length > 0" class="mb-1">
+                <button class="btn btn-secondary mr-1"
+                    style="font-size: 90%;"
+                    *ngFor="let com of company">{{ com }}
+                </button>
+            </div>
+            <div *ngIf="question.type === 'question' && topic.length > 0">
+                <button class="btn btn-info mr-1"
+                    style="font-size: 90%;"
+                    *ngFor="let top of topic">{{ top }}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mb-2" *ngIf="question.isEditor">
+    <div class="card">
+        <div class="card-header">
+            <div [ngClass]="{ 'mb-2': showBody }" (click)="showBody = !showBody">
+                <h5 style="display: inline;"><strong>{{ question.heading }}</strong></h5>
+                <i class="fa fa-caret-up float-right" *ngIf="showBody"></i>
+                <i class="fa fa-caret-down float-right" *ngIf="!showBody"></i>
+            </div>
+            <div *ngIf="question.value.length > 0 && showBody">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item" (click)="setLangCode(sol)" *ngFor="let sol of question.value">
+                        <a class="nav-link" [ngClass]="{ 'active': selectedSol.lang === sol.lang }">{{ sol.lang }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-body" style="padding: 10px;" *ngIf="showBody">
+            <ace style="height:200px"
+                [disabled]="true" 
+                [mode]="selectedSol.value"
+                [theme]="'monokai'"
+                [config]="{}"
+                [(value)]="selectedSol.code">
+            </ace>
+        </div>
+    </div>
+</div>
