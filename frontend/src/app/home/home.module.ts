@@ -6,6 +6,7 @@ import { FeaturesCardComponent } from './features-card/features-card.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { CategoryComponent } from './category/category.component';
 import { CategoryCardComponent } from './category/category-card/category-card.component';
+import { AnimateModule } from '../animate/animate.module';
 
 
 
@@ -15,6 +16,7 @@ import { CategoryCardComponent } from './category/category-card/category-card.co
     CommonModule,
     SharedModule,
     HomeRoutingModule,
+    AnimateModule
   ],
   exports: [
     HomeComponent,

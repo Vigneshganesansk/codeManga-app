@@ -36,8 +36,8 @@ constructor(private breakpointObserver: BreakpointObserver, private toolbarServi
     map(result => result.matches),
     shareReplay()
   );
-  scrollToElement(link: String){
-      this.toolbarService.setClickedTab(link);
-  }
+  // scrollToElement(link: String){
+  //     this.toolbarService.setClickedTab(link);
+  // }
 
 }

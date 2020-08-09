@@ -1,4 +1,3 @@
-
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" 
       [ngClass]="{hidden: (isHandset$ | async)!.matches}"
@@ -8,15 +7,13 @@
       [opened]="(isHandset$ | async)!.matches">
     <mat-toolbar color="primary">Menu</mat-toolbar>
     <mat-nav-list fxLayout="column" fxLayoutAlign="space-between">
-      <a mat-list-item  (click)="scrollToElement('link1')">Link 1</a>
-      <a mat-list-item  (click)="scrollToElement('link2')">Link 2</a>
-      <a mat-list-item  (click)="scrollToElement('link3')">Link 3</a>
-      <a mat-list-item  routerLink="/content" (click)="scrollToElement('link4')">Link 4</a>
-      <a mat-list-item  (click)="scrollToElement('link5')">Link 5</a>
+      <a mat-list-item  routerLink="" routerLinkActive="">Content</a>
+      <a mat-list-item  routerLink="" routerLinkActive="">Feed</a>
+      <a mat-list-item  routerLink="" routerLinkActive="">About Us</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar style="position: fixed; background-color: transparent;" color="primary"  fxLayout="row" fxLayoutAlign="space-between center" [ngClass]="{'bg-dark':scroll}">
+    <mat-toolbar color="primary" style="background-color: black;"  fxLayout="row" fxLayoutAlign="space-between center" [ngClass]="{'bg-dark':scroll}">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -26,14 +23,12 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span class="title">
-        <a mat-list-item (click)="scrollToElement('link0')"><h1>Programmer-App</h1></a>
+        <a mat-list-item routerLink=""><h1>CodeManga</h1></a>
       </span>
       
-        <a mat-list-item (click)="scrollToElement('link1')" *ngIf="(isHandset$ | async) === false" [ngClass]="{'active': currentActive === 'link1'}">Link 1</a>
-        <a mat-list-item (click)="scrollToElement('link2')" *ngIf="(isHandset$ | async) === false" [ngClass]="{'active': currentActive === 'link2'}">Link 2</a>
-        <a mat-list-item (click)="scrollToElement('link3')" *ngIf="(isHandset$ | async) === false" [ngClass]="{'active': currentActive === 'link3'}">Link 3</a>
-        <a mat-list-item routerLink="/content" *ngIf="(isHandset$ | async) === false" [ngClass]="{'active': currentActive === 'link4'}">Link 4</a>
-        <a mat-list-item (click)="scrollToElement('link5')" *ngIf="(isHandset$ | async) === false" [ngClass]="{'active': currentActive === 'link5'}">Link 5</a>
+        <a mat-list-item routerLink="content" routerLinkActive="" *ngIf="(isHandset$ | async) === false" [ngClass]="{'active': currentActive === 'link1'}">Content</a>
+        <a mat-list-item routerLink="" routerLinkActive="" *ngIf="(isHandset$ | async) === false" [ngClass]="{'active': currentActive === 'link2'}">Feed</a>
+        <a mat-list-item routerLink="" routerLinkActive="" *ngIf="(isHandset$ | async) === false" [ngClass]="{'active': currentActive === 'link3'}">About Us</a>
       
       <button mat-icon-button>
         <mat-icon aria-label="Login">login</mat-icon>
