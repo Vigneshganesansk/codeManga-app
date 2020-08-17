@@ -9,14 +9,13 @@ import { CategoryCardComponent } from './category/category-card/category-card.co
 import { AnimateModule } from '../animate/animate.module';
 
 
-
 @NgModule({
   declarations: [HomeComponent, FeaturesCardComponent, CategoryComponent, CategoryCardComponent],
   imports: [
     CommonModule,
     SharedModule,
     HomeRoutingModule,
-    AnimateModule
+    AnimateModule,
   ],
   exports: [
     HomeComponent,

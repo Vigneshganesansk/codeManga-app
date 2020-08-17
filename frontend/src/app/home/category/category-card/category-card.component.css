@@ -1,0 +1,114 @@
+/* mat-expansion-panel{
+	width: 25%;
+} */
+/* ::ng-deep .mat-expansion-panel-body{
+	padding: 0 !important;
+} */
+/* Progress bar css */
+figure {
+	margin: 0 auto;
+	/* max-width: 00px; */
+	position: relative;
+}
+/* .graphic {
+	padding-left: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+} */
+/* .row {
+	margin-bottom: 1.5em;
+} */
+@keyframes expand {
+	from {width: 0%;}
+	to {width: 100%;}
+}
+@media screen and (min-width: 768px) {
+	@keyframes expand {
+		from {width: 0%;}
+		to {width: calc(100%);}
+	}
+}
+.chart {
+	/* overflow: hidden;
+	width: auto; */
+	animation: expand 1.5s ease forwards;
+}
+.row + .row .chart {
+	animation-delay: .2s;
+}
+.row + .row + .row .chart {
+	animation-delay: .4s;
+}
+.block {
+	display: block;
+	height: 50px;
+	width: 100%;
+	margin-bottom: 0;
+	color: #fff;
+	font-size: .75em;
+	float: left;
+	background-color: rgb(6, 141, 6);
+	position: relative;
+	overflow: hidden;
+	opacity: 1;
+	transition: opacity, .3s ease;
+	cursor: pointer;
+}
+.block:nth-of-type(2),
+.legend li:nth-of-type(2):before {
+	background-color: rgb(185, 214, 20);
+}
+.block:nth-of-type(3),
+.legend li:nth-of-type(3):before {
+	background-color: rgb(207, 30, 24);
+}
+.block:hover {
+	opacity: .65;
+}
+.value {
+	display: block;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%);
+}
+/* .x-axis {
+    text-align: center;
+	padding: .5em 0 2em;
+} */
+/* ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+li {
+	float: left;
+  } */
+.legend {
+    margin: 0 auto;
+    padding: 0;
+	font-size: .9em;
+}
+.legend li {
+    display: inline-block;
+    padding: .25em 1em;
+    line-height: 1em;
+} 
+.legend li:before {
+    content: "";
+    margin-right: .5em;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+	background-color: rgb(6, 141, 6);
+}
+@media screen and (min-width: 768px) {
+	.block {
+		font-size: 1em;
+	}
+	.legend {
+		width: 50%;
+	}
+}

@@ -1,5 +1,48 @@
-<div class="card">
-    <div class="card-body">
-      This is some text within a card body.
-    </div>
-</div>
+<mat-accordion [displayMode]="flat">
+    <mat-expansion-panel [hideToggle]="true" (opened)="isOpen = true" (closed)="isOpen = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Dynamic Programming
+        </mat-panel-title>
+        <mat-panel-description>
+         
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div *ngIf="isOpen">
+        <div class="row" fxLayout="row" fxLayoutAlign="center center">
+          <span [countUp]="newNum" [reanimateOnClick]="false"
+            [options]="option" [animation]="isOpen === true"></span>
+          <span> - Total Problems</span>
+        </div>
+        
+        <!-- Progress Bar start -->
+        <figure>
+            <!-- <div class="x-axis legend" fxLayout="row" fxLayoutAlign="center center">
+                <li>Basic</li>
+                <li>Intermediate</li>
+                <li>Hard</li>
+            </div> -->
+          
+            <div class="graphic">
+              <div class="row" fxLayout="row" fxLayoutAlign="start center">
+                <div class="chart">
+                  <span class="block" [style.width.%]="57*100/78" #tooltip="matTooltip"
+                  matTooltip="Basic">
+                     <span class="value">57</span>
+                  </span>
+                  <span class="block"[style.width.%]="13*100/78" #tooltip="matTooltip"
+                  matTooltip="Intermediate">
+                     <span class="value">13</span>
+                  </span>
+                  <span class="block" [style.width.%]="8*100/78" #tooltip="matTooltip"
+                  matTooltip="Hard">
+                     <span class="value">8</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </figure>
+        <!-- Progress Bar end -->
+      </div>
+    </mat-expansion-panel>
+</mat-accordion><br/>

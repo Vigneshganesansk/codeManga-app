@@ -5,43 +5,22 @@ import { Location } from '@angular/common';
 
 import { ToolbarService } from '../../core/services/toolbar/toolbar.service';
 import { trigger, transition, style, animate, query, group, state } from '@angular/animations';
-// const left = [
-//     style({ transform: 'translateX(-100%)' }), animate(2000, style({ transform: 'translateX(0%)' }))
-//   ];
-
-// const right = [
-//   style({ transform: 'translateX(100%)' }), animate(2000, style({ transform: 'translateX(0%)' }))
-// ];
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  // animations: [
-  //   trigger('slideFromRight', [
-  //     transition(':enter', right),
-  //   ]),
-  //   trigger('slideFromLeft', [
-  //     transition(':enter', left),
-  //   ]),
-  //   trigger('fadeInOut', [
-  //     state('void', style({
-  //       opacity: 0
-  //     })),
-  //     transition('void <=> *', animate(2000)),
-  //   ]),
-  // ],
 })
 export class HomeComponent implements OnInit  {
 
-  currentSection = 'link0';
-
+  public number: number = 1000;
 
 
   constructor(private toolbarService: ToolbarService,private _router: Router, private _route: ActivatedRoute, private _location: Location) { 
     // this.toolbarService.scrollToSelectedTab.subscribe((response) => {
     //   this.scrollTo(response);
     // })
+    
   }
 
   ngOnInit(): void {

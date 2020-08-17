@@ -23,9 +23,13 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ScrollSpyDirective } from '../core/directives/scroll-spy.directive';
+import { CountUpDirective } from '../core/directives/countup.directive';
+
+
 
 
 
@@ -53,16 +57,16 @@ import { ScrollSpyDirective } from '../core/directives/scroll-spy.directive';
     MatSnackBarModule,
     MatSlideToggleModule,
     MatDividerModule,
+    MatExpansionModule,
 
     FlexLayoutModule,
-    NgbModule
+    NgbModule,
   ],
-  declarations: [ScrollSpyDirective],
+  declarations: [ScrollSpyDirective, CountUpDirective],
   exports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-
 
     MatButtonModule,
     MatMenuModule,
@@ -83,10 +87,13 @@ import { ScrollSpyDirective } from '../core/directives/scroll-spy.directive';
     MatDividerModule,
     MatSliderModule,
     MatDatepickerModule,
+    MatExpansionModule,
 
     FlexLayoutModule,
     NgbModule,
     ScrollSpyDirective,
+    CountUpDirective,
+
   ]
 })
 export class SharedModule {}
