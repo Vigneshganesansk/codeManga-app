@@ -18,10 +18,10 @@
             </button>
         </div>
     </div>
-    <div class="row container-fluid text-center">
-        <div *ngFor="let ques of questions" class="col-lg-12">
+    <div class="row container-fluid text-center" style="padding-top: 0px">
+        <div *ngFor="let ques of questions" class="col-lg-12"  [wmAnimate]="animationType" speed="fast" aos>
             <a routerLink="contentview">
-                <app-content-card [animationType]='animationType' [question]='ques'></app-content-card>
+                <app-content-card [question]='ques'></app-content-card>
             </a>
         </div>
     </div>
