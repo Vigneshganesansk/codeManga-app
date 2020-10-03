@@ -19,6 +19,9 @@ import 'brace/theme/clouds';
 import 'brace/theme/monokai';
 import { AceModule } from 'ngx-ace-wrapper';
 import { EditorCardComponent } from './editor-card/editor-card.component';
+import { SharedModule } from '../shared/shared.module';
+import { AnimateModule } from '../animate/animate.module';
+
 
 
 @NgModule({
@@ -27,12 +30,14 @@ import { EditorCardComponent } from './editor-card/editor-card.component';
     ContentCardComponent, 
     FilterSectionComponent, 
     EditorViewComponent,
-    EditorCardComponent
+    EditorCardComponent,
   ],
   imports: [
     CommonModule,
     ContentRoutingModule,
-    AceModule
+    AceModule,
+    SharedModule,
+    AnimateModule
   ]
 })
 export class ContentModule { }

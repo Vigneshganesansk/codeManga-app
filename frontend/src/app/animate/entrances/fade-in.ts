@@ -18,7 +18,7 @@ export const fadeIn = [
 
   transition('* => fadeInRight', [
 
-    style({ opacity: 0, transform: 'translateX(-20px)' }),
+    style({ opacity: 0, transform: 'translateX(-60px)' }),
 
     animate('{{timing}} {{delay}} ease-in', style('*'))
 
@@ -26,7 +26,7 @@ export const fadeIn = [
 
   transition('* => fadeInLeft', [
 
-    style({ opacity: 0, transform: 'translateX(20px)' }),
+    style({ opacity: 0, transform: 'translateX(60px)' }),
 
     animate('{{timing}} {{delay}} ease-in', style('*'))
 
@@ -34,7 +34,7 @@ export const fadeIn = [
 
   transition('* => fadeInUp', [
 
-    style({ opacity: 0, transform: 'translateY(20px)' }),
+    style({ opacity: 0, transform: 'translateY(60px)' }),
 
     animate('{{timing}} {{delay}} ease-in', style('*'))
 
@@ -42,7 +42,7 @@ export const fadeIn = [
 
   transition('* => fadeInDown', [
 
-    style({ opacity: 0, transform: 'translateY(-20px)' }),
+    style({ opacity: 0, transform: 'translateY(-60px)' }),
 
     animate('{{timing}} {{delay}} ease-in', style('*'))
 

@@ -33,8 +33,6 @@ import { CountUpDirective } from '../core/directives/countup.directive';
 
 
 
-
-
 @NgModule({
   imports: [
     CommonModule,
@@ -92,8 +90,7 @@ import { CountUpDirective } from '../core/directives/countup.directive';
     FlexLayoutModule,
     NgbModule,
     ScrollSpyDirective,
-    CountUpDirective,
-
+    CountUpDirective
   ]
 })
 export class SharedModule {}

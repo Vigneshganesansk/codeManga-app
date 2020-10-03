@@ -3,11 +3,26 @@
         <h1 class="mat-display-2">Company</h1> 
         <h1>The world's first inclusive free stock coding & question library</h1>
     </div>
-    <div class="row container-fluid">
-        <div *ngFor="let i of [1,2,3,4,5,6,7,8,2,3,4,5,6,7,8]" class="col-sm-6 col-md-4 col-lg-3">
+    <div class="row container-fluid text-center">
+        <div class="col-lg-3">
+            <button class="btn btn-primary" (click)="prev()">
+                Prev
+            </button>
+        </div>
+        <div class="col-lg-6">
+            <h1>{{category}}</h1>
+        </div>
+        <div class="col-lg-3">
+            <button class="btn btn-primary" (click)="next()">
+                Next
+            </button>
+        </div>
+    </div>
+    <div class="row container-fluid text-center">
+        <div *ngFor="let ques of questions" class="col-lg-12">
             <a routerLink="contentview">
-                <app-content-card></app-content-card>
+                <app-content-card [animationType]='animationType' [question]='ques'></app-content-card>
             </a>
         </div>
     </div>
-
+ 
